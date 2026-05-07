@@ -116,7 +116,7 @@ export default function EasinArafatCV() {
       <section className="flex items-start justify-between gap-6 border-b border-[#222] px-9 py-9 max-md:px-6 max-sm:flex-col-reverse max-sm:px-5 max-sm:py-6">
         <div className="min-w-0 flex-1">
           <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-[#c8f25a]">
-            // Available for junior / internship roles
+            {"Available for junior / internship roles"}
           </p>
 
           <h1 className="mb-2 text-[50px] font-bold leading-none tracking-[-0.03em] text-[#f0ede6] max-md:text-[42px] max-sm:text-[38px] max-[420px]:text-[32px]">
@@ -179,7 +179,9 @@ export default function EasinArafatCV() {
               <a
                 href={link}
                 target={link.startsWith("http") ? "_blank" : undefined}
-                rel={link.startsWith("http") ? "noopener noreferrer" : undefined}
+                rel={
+                  link.startsWith("http") ? "noopener noreferrer" : undefined
+                }
                 className="break-words text-[10.5px] font-medium text-[#f0ede6] no-underline hover:text-[#c8f25a]"
               >
                 {val}
@@ -349,7 +351,10 @@ export default function EasinArafatCV() {
               ["English", "Professional"],
               ["Hindi", "Professional"],
             ].map(([lang, level]) => (
-              <div key={lang} className="mb-1.5 flex items-center justify-between">
+              <div
+                key={lang}
+                className="mb-1.5 flex items-center justify-between"
+              >
                 <span className="text-[11px] text-[#888]">{lang}</span>
                 <span className="font-mono text-[7.5px] text-[#c8f25a]">
                   {level}
