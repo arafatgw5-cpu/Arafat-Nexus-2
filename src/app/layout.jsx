@@ -1,3 +1,4 @@
+import MobileBottomNav from "@/components/MobileBottomNav";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
           <StairTransition />
           <PageTransition>{children}</PageTransition>
           <Toaster />
+          <MobileBottomNav />
         </ThemeProvider>
       </body>
     </html>
