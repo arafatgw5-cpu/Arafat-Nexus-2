@@ -56,8 +56,8 @@ const projects = [
       "A modern personal portfolio website with animated sections, project showcase, clean UI design, responsive layout, and professional developer branding.",
     stack: ["Next.js", "Framer Motion", "shadcn/ui", "Lucide React"],
     image: "/projectThree.png",
-    liveUrl: "https://your-portfolio-live-link.vercel.app",
-    githubUrl: "https://github.com/arafatgw5-cpu",
+    liveUrl: "https://arafat-nexus-2.vercel.app",
+    githubUrl: "https://github.com/arafatgw5-cpu/Arafat-Nexus-2",
   },
 ];
 
