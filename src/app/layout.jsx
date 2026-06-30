@@ -1,5 +1,6 @@
 import MobileBottomNav from "@/components/MobileBottomNav";
 import "./globals.css";
+<<<<<<< HEAD
 // import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
@@ -8,6 +9,14 @@ import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/context/ThemeContext";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+=======
+import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
+import StairTransition from "@/components/StairTransition";
+import ThemeProvider from "@/components/ThemeProvider";
+import { Toaster } from "@/components/ui/toaster";
+// import Script from "next/script";
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
 
 export const metadata = {
   title: "Easin Arafat | Developer Portfolio",
@@ -48,14 +57,24 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
       </head>
+<<<<<<< HEAD
       <body suppressHydrationWarning>
         <ThemeProvider>
           <Navbar />
+=======
+
+      <body suppressHydrationWarning>
+        <ThemeProvider>
+          <Header />
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
           <StairTransition />
           <PageTransition>{children}</PageTransition>
           <Toaster />
           <MobileBottomNav />
+<<<<<<< HEAD
           <Footer />
+=======
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
         </ThemeProvider>
       </body>
     </html>

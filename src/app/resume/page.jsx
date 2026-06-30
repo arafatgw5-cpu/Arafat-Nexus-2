@@ -3,6 +3,7 @@ import React from "react";
 
 const projects = [
   {
+<<<<<<< HEAD
     name: "Ticket Bari",
     tag: "Ticket Booking",
     live: "https://a-fff.vercel.app",
@@ -15,6 +16,8 @@ const projects = [
     stack: "Next.js · Node.js · MongoDB · Stripe · TanStack Query",
   },
   {
+=======
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
     name: "SkillSphere",
     tag: "Next.js App",
     live: "https://skill-sphere-b13-8-94z6.vercel.app",
@@ -38,12 +41,31 @@ const projects = [
     ],
     stack: "Next.js · REST API · Better Auth · Tailwind CSS",
   },
+<<<<<<< HEAD
+=======
+  {
+    name: "Personal Portfolio",
+    tag: "Portfolio",
+    live: "https://arafat-nexus-2.vercel.app",
+    desc: "A professional developer portfolio built to showcase projects, resume, contact information, frontend development skills, and modern UI animations.",
+    features: [
+      "Animated page transitions with Framer Motion",
+      "Dark modern design with green accent and shadcn/ui",
+      "Reusable components and clean JSX structure",
+    ],
+    stack: "Next.js · Framer Motion · Tailwind CSS · shadcn/ui",
+  },
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
 ];
 
 const skillGroups = [
   {
     title: "Core Frontend",
+<<<<<<< HEAD
     skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS", "TanStack Query"],
+=======
+    skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS"],
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
     hot: true,
   },
   {
@@ -53,7 +75,11 @@ const skillGroups = [
   },
   {
     title: "Backend & Auth",
+<<<<<<< HEAD
     skills: ["Node.js", "Express.js", "MongoDB", "Better Auth", "Stripe", "REST API"],
+=======
+    skills: ["Node.js", "Express.js", "MongoDB", "Better Auth", "REST API"],
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
     hot: false,
   },
   {
@@ -88,11 +114,19 @@ const contactInfo = [
 function SectionHead({ num, title }) {
   return (
     <div className="mb-4 flex items-center gap-2.5">
+<<<<<<< HEAD
       <span className="font-mono text-[9px] tracking-[0.12em] text-[var(--color-primary)]">
         {num}
       </span>
       <div className="h-px flex-1 bg-[var(--color-border)]" />
       <span className="text-[8px] font-semibold uppercase tracking-[0.2em] text-[var(--color-muted)]">
+=======
+      <span className="font-mono text-[9px] tracking-[0.12em] text-[#c8f25a]">
+        {num}
+      </span>
+      <div className="h-px flex-1 bg-[#222]" />
+      <span className="text-[8px] font-semibold uppercase tracking-[0.2em] text-[#666]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
         {title}
       </span>
     </div>
@@ -101,6 +135,7 @@ function SectionHead({ num, title }) {
 
 export default function EasinArafatCV() {
   return (
+<<<<<<< HEAD
     <div className="mx-auto max-w-[900px] overflow-hidden bg-[var(--color-bg)] font-['Space_Grotesk'] text-[var(--color-text)]">
       {/* TOP BAR */}
       <div className="flex items-center justify-between gap-3 bg-[var(--color-primary)] px-9 py-2 max-sm:flex-col max-sm:items-start max-sm:px-5">
@@ -108,11 +143,21 @@ export default function EasinArafatCV() {
           Curriculum Vitae — 2026
         </span>
         <span className="font-mono text-[9px] font-bold uppercase tracking-[0.18em] text-[var(--color-bg)]">
+=======
+    <div className="mx-auto max-w-[900px] overflow-hidden bg-[#0d0d0d] font-['Space_Grotesk'] text-[#f0ede6]">
+      {/* TOP BAR */}
+      <div className="flex items-center justify-between gap-3 bg-[#c8f25a] px-9 py-2 max-sm:flex-col max-sm:items-start max-sm:px-5">
+        <span className="font-mono text-[9px] font-bold uppercase tracking-[0.18em] text-[#0d0d0d]">
+          Curriculum Vitae — 2026
+        </span>
+        <span className="font-mono text-[9px] font-bold uppercase tracking-[0.18em] text-[#0d0d0d]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
           Frontend &amp; Full Stack Learner
         </span>
       </div>
 
       {/* HERO */}
+<<<<<<< HEAD
       <section className="flex items-start justify-between gap-6 border-b border-[var(--color-border)] px-9 py-9 max-md:px-6 max-sm:flex-col-reverse max-sm:px-5 max-sm:py-6">
         <div className="min-w-0 flex-1">
           <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--color-primary)]">
@@ -133,13 +178,40 @@ export default function EasinArafatCV() {
             Aspiring Frontend and Full Stack Web Developer from Bangladesh,
             focused on building clean, responsive, and user-friendly web
             applications. I enjoy solving real-world problems through hands-on
+=======
+      <section className="flex items-start justify-between gap-6 border-b border-[#222] px-9 py-9 max-md:px-6 max-sm:flex-col-reverse max-sm:px-5 max-sm:py-6">
+        <div className="min-w-0 flex-1">
+          <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-[#c8f25a]">
+            {"Available for junior / internship roles"}
+          </p>
+
+          <h1 className="mb-2 text-[50px] font-bold leading-none tracking-[-0.03em] text-[#f0ede6] max-md:text-[42px] max-sm:text-[38px] max-[420px]:text-[32px]">
+            Easin
+            <br />
+            <span className="text-[#c8f25a]">Arafat</span>
+          </h1>
+
+          <p className="mb-5 text-[11px] font-normal uppercase tracking-[0.06em] text-[#888] max-[420px]:text-[9.5px] max-[420px]:leading-relaxed">
+            Frontend Developer · React · Next.js · Bangladesh
+          </p>
+
+          <p className="max-w-[480px] text-[12.5px] font-light leading-[1.7] text-[#aaa] max-sm:max-w-full max-[420px]:text-[11.5px]">
+            Aspiring Frontend and Full Stack Web Developer from Bangladesh,
+            focused on building clean, responsive, and user-friendly web
+            applications using React, Next.js, Tailwind CSS, Better Auth, and
+            MongoDB. I enjoy solving real-world problems through hands-on
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
             projects and continuously improving my development skills.
           </p>
         </div>
 
         {/* PROFILE PHOTO */}
         <div className="flex shrink-0 flex-col items-center gap-2.5 pt-1 max-sm:w-full max-sm:flex-row max-sm:flex-wrap max-sm:justify-start">
+<<<<<<< HEAD
           <div className="relative h-[110px] w-[110px] shrink-0 rounded-full before:absolute before:inset-[-3px] before:rounded-full before:bg-[conic-gradient(var(--color-primary)_0deg_270deg,var(--color-border)_270deg_360deg)] after:absolute after:inset-0.5 after:rounded-full after:bg-[var(--color-bg)] max-md:h-24 max-md:w-24 max-sm:h-[92px] max-sm:w-[92px]">
+=======
+          <div className="relative h-[110px] w-[110px] shrink-0 rounded-full before:absolute before:inset-[-3px] before:rounded-full before:bg-[conic-gradient(#c8f25a_0deg_270deg,#2a2a2a_270deg_360deg)] after:absolute after:inset-0.5 after:rounded-full after:bg-[#0d0d0d] max-md:h-24 max-md:w-24 max-sm:h-[92px] max-sm:w-[92px]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
             <Image
               src="/resume-i.jpeg"
               alt="Easin Arafat"
@@ -151,12 +223,21 @@ export default function EasinArafatCV() {
           </div>
 
           <div>
+<<<<<<< HEAD
             <p className="text-center font-mono text-[7px] uppercase tracking-[0.14em] text-[var(--color-muted)] max-sm:text-left">
               Easin Arafat
             </p>
 
             <div className="mt-1 flex items-center gap-1.5 font-mono text-[7px] uppercase tracking-[0.1em] text-[var(--color-primary)]">
               <span className="h-[5px] w-[5px] rounded-full bg-[var(--color-primary)]" />
+=======
+            <p className="text-center font-mono text-[7px] uppercase tracking-[0.14em] text-[#555] max-sm:text-left">
+              Easin Arafat
+            </p>
+
+            <div className="mt-1 flex items-center gap-1.5 font-mono text-[7px] uppercase tracking-[0.1em] text-[#c8f25a]">
+              <span className="h-[5px] w-[5px] rounded-full bg-[#c8f25a]" />
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
               Open to Work
             </div>
           </div>
@@ -164,6 +245,7 @@ export default function EasinArafatCV() {
       </section>
 
       {/* CONTACT */}
+<<<<<<< HEAD
       <div className="grid grid-cols-4 border-b border-[var(--color-border)] max-sm:grid-cols-2 max-[420px]:grid-cols-1">
         {contactInfo.map(({ label, val, link }) => (
           <div
@@ -171,6 +253,15 @@ export default function EasinArafatCV() {
             className="min-w-0 border-r border-[var(--color-border)] px-[18px] py-3 last:border-r-0 max-sm:border-b max-[420px]:border-r-0"
           >
             <p className="mb-1 font-mono text-[7.5px] uppercase tracking-[0.16em] text-[var(--color-muted)]">
+=======
+      <div className="grid grid-cols-4 border-b border-[#222] max-sm:grid-cols-2 max-[420px]:grid-cols-1">
+        {contactInfo.map(({ label, val, link }) => (
+          <div
+            key={label}
+            className="min-w-0 border-r border-[#222] px-[18px] py-3 last:border-r-0 max-sm:border-b max-[420px]:border-r-0"
+          >
+            <p className="mb-1 font-mono text-[7.5px] uppercase tracking-[0.16em] text-[#555]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
               {label}
             </p>
 
@@ -181,12 +272,20 @@ export default function EasinArafatCV() {
                 rel={
                   link.startsWith("http") ? "noopener noreferrer" : undefined
                 }
+<<<<<<< HEAD
                 className="break-words text-[10.5px] font-medium text-[var(--color-text)] no-underline hover:text-[var(--color-primary)]"
+=======
+                className="break-words text-[10.5px] font-medium text-[#f0ede6] no-underline hover:text-[#c8f25a]"
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
               >
                 {val}
               </a>
             ) : (
+<<<<<<< HEAD
               <p className="break-words text-[10.5px] font-medium text-[var(--color-text)]">
+=======
+              <p className="break-words text-[10.5px] font-medium text-[#f0ede6]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
                 {val}
               </p>
             )}
@@ -197,13 +296,18 @@ export default function EasinArafatCV() {
       {/* BODY */}
       <div className="grid grid-cols-[1fr_230px] max-sm:grid-cols-1">
         {/* MAIN */}
+<<<<<<< HEAD
         <main className="border-r border-[var(--color-border)] px-[30px] py-[26px] max-md:px-6 max-sm:border-r-0 max-sm:border-b max-sm:px-5">
+=======
+        <main className="border-r border-[#222] px-[30px] py-[26px] max-md:px-6 max-sm:border-r-0 max-sm:border-b max-sm:px-5">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
           <SectionHead num="01" title="Selected Projects" />
 
           <div className="space-y-3">
             {projects.map((p) => (
               <article
                 key={p.name}
+<<<<<<< HEAD
                 className="relative overflow-hidden border border-[var(--color-border)] bg-[var(--color-surface)] px-[18px] py-4 before:absolute before:left-0 before:top-0 before:h-full before:w-[3px] before:bg-[var(--color-primary)] max-[420px]:p-[15px]"
               >
                 <div className="mb-2 flex items-start justify-between gap-2.5 max-[420px]:flex-col">
@@ -211,11 +315,24 @@ export default function EasinArafatCV() {
                     {p.name}
                   </h3>
                   <span className="shrink-0 whitespace-nowrap border border-[var(--color-border)] bg-[var(--color-bg)] px-2 py-[3px] font-mono text-[7.5px] uppercase tracking-[0.1em] text-[var(--color-primary)]">
+=======
+                className="relative overflow-hidden border border-[#1e1e1e] bg-[#111] px-[18px] py-4 before:absolute before:left-0 before:top-0 before:h-full before:w-[3px] before:bg-[#c8f25a] max-[420px]:p-[15px]"
+              >
+                <div className="mb-2 flex items-start justify-between gap-2.5 max-[420px]:flex-col">
+                  <h3 className="text-[13.5px] font-semibold tracking-[-0.01em] text-[#f0ede6]">
+                    {p.name}
+                  </h3>
+                  <span className="shrink-0 whitespace-nowrap border border-[#2a2a2a] bg-[#1e1e1e] px-2 py-[3px] font-mono text-[7.5px] uppercase tracking-[0.1em] text-[#c8f25a]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
                     {p.tag}
                   </span>
                 </div>
 
+<<<<<<< HEAD
                 <p className="mb-2 text-[11px] font-light leading-[1.65] text-[var(--color-text-sec)]">
+=======
+                <p className="mb-2 text-[11px] font-light leading-[1.65] text-[#777]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
                   {p.desc}
                 </p>
 
@@ -223,22 +340,35 @@ export default function EasinArafatCV() {
                   {p.features.map((f) => (
                     <p
                       key={f}
+<<<<<<< HEAD
                       className="relative py-[2.5px] pl-3.5 text-[10.5px] leading-normal text-[var(--color-muted)] before:absolute before:left-0 before:text-[9px] before:text-[var(--color-primary)] before:content-['→']"
+=======
+                      className="relative py-[2.5px] pl-3.5 text-[10.5px] leading-normal text-[#666] before:absolute before:left-0 before:text-[9px] before:text-[#c8f25a] before:content-['→']"
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
                     >
                       {f}
                     </p>
                   ))}
                 </div>
 
+<<<<<<< HEAD
                 <p className="mb-2.5 font-mono text-[8px] tracking-[0.05em] text-[var(--color-muted)]">
                   Stack: <span className="text-[var(--color-text-sec)]">{p.stack}</span>
+=======
+                <p className="mb-2.5 font-mono text-[8px] tracking-[0.05em] text-[#555]">
+                  Stack: <span className="text-[#888]">{p.stack}</span>
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
                 </p>
 
                 <a
                   href={p.live}
                   target="_blank"
                   rel="noopener noreferrer"
+<<<<<<< HEAD
                   className="inline-flex items-center justify-center border border-[var(--color-primary)] bg-[var(--color-primary)] px-3 py-1.5 font-mono text-[8px] font-bold uppercase tracking-[0.12em] text-[var(--color-bg)] no-underline transition hover:bg-transparent hover:text-[var(--color-primary)]"
+=======
+                  className="inline-flex items-center justify-center border border-[#c8f25a] bg-[#c8f25a] px-3 py-1.5 font-mono text-[8px] font-bold uppercase tracking-[0.12em] text-[#0d0d0d] no-underline transition hover:bg-transparent hover:text-[#c8f25a]"
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
                 >
                   Live Site
                 </a>
@@ -250,6 +380,7 @@ export default function EasinArafatCV() {
             <SectionHead num="02" title="Experience" />
           </div>
 
+<<<<<<< HEAD
           <div className="mb-3.5 border-b border-[var(--color-border)] pb-3.5">
             <h3 className="mb-0.5 text-[12.5px] font-semibold text-[var(--color-text)]">
               Frontend Developer
@@ -261,10 +392,25 @@ export default function EasinArafatCV() {
               Building modern and responsive web applications using React,
               Next.js, Tailwind CSS, and Better Auth. Worked on Ticket Bari,
               SkillSphere, Dragon News, and multiple assignment-based projects.
+=======
+          <div className="mb-3.5 border-b border-[#1a1a1a] pb-3.5">
+            <h3 className="mb-0.5 text-[12.5px] font-semibold text-[#f0ede6]">
+              Frontend Developer
+            </h3>
+            <p className="mb-1.5 font-mono text-[8px] tracking-[0.06em] text-[#555]">
+              Personal &amp; Academic Projects · 2024 — Present
+            </p>
+            <p className="text-[11px] font-light leading-[1.65] text-[#666]">
+              Building modern and responsive web applications using React,
+              Next.js, Tailwind CSS, and Better Auth. Worked on SkillSphere,
+              Dragon News, portfolio websites, and multiple assignment-based
+              projects.
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
             </p>
           </div>
 
           <div>
+<<<<<<< HEAD
             <h3 className="mb-0.5 text-[12.5px] font-semibold text-[var(--color-text)]">
               Full Stack Learner
             </h3>
@@ -272,14 +418,29 @@ export default function EasinArafatCV() {
               Programming Hero / Self Learning · 2025 — Present
             </p>
             <p className="text-[11px] font-light leading-[1.65] text-[var(--color-text-sec)]">
+=======
+            <h3 className="mb-0.5 text-[12.5px] font-semibold text-[#f0ede6]">
+              Full Stack Learner
+            </h3>
+            <p className="mb-1.5 font-mono text-[8px] tracking-[0.06em] text-[#555]">
+              Programming Hero / Self Learning · 2025 — Present
+            </p>
+            <p className="text-[11px] font-light leading-[1.65] text-[#666]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
               Learning full stack development through hands-on projects,
               authentication systems, MongoDB database integration, dynamic
               routing, deployment, and clean UI design.
             </p>
 
+<<<<<<< HEAD
             <div className="mt-2 inline-flex items-center gap-1.5 border border-[var(--color-primary)] bg-[var(--color-bg)] px-3 py-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-primary)]" />
               <span className="font-mono text-[7.5px] uppercase tracking-[0.1em] text-[var(--color-primary)]">
+=======
+            <div className="mt-2 inline-flex items-center gap-1.5 border border-[#2a3a1a] bg-[#0f1a06] px-3 py-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#c8f25a]" />
+              <span className="font-mono text-[7.5px] uppercase tracking-[0.1em] text-[#c8f25a]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
                 Available Now · Remote Ready
               </span>
             </div>
@@ -292,7 +453,11 @@ export default function EasinArafatCV() {
 
           {skillGroups.map((g) => (
             <div key={g.title} className="mb-[18px]">
+<<<<<<< HEAD
               <h4 className="mb-2 font-mono text-[7.5px] uppercase tracking-[0.16em] text-[var(--color-primary)]">
+=======
+              <h4 className="mb-2 font-mono text-[7.5px] uppercase tracking-[0.16em] text-[#c8f25a]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
                 {g.title}
               </h4>
 
@@ -302,8 +467,13 @@ export default function EasinArafatCV() {
                     key={s}
                     className={`inline-block border px-[9px] py-[3px] text-[9.5px] ${
                       g.hot
+<<<<<<< HEAD
                         ? "border-[var(--color-primary)] bg-[var(--color-bg)] text-[var(--color-primary)]"
                         : "border-[var(--color-border)] text-[var(--color-text-sec)]"
+=======
+                        ? "border-[#2a3a1a] bg-[#0f1a06] text-[#c8f25a]"
+                        : "border-[#1e1e1e] text-[#888]"
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
                     }`}
                   >
                     {s}
@@ -315,6 +485,7 @@ export default function EasinArafatCV() {
 
           <SectionHead num="04" title="Education" />
 
+<<<<<<< HEAD
           <div className="mb-3.5 border-b border-[var(--color-border)] pb-3.5">
             <h3 className="mb-0.5 text-[12.5px] font-semibold text-[var(--color-text)]">
               Web Development
@@ -323,11 +494,22 @@ export default function EasinArafatCV() {
               Programming Hero Batch 13 · 2024 — Present
             </p>
             <p className="text-[11px] font-light leading-[1.65] text-[var(--color-text-sec)]">
+=======
+          <div className="mb-3.5 border-b border-[#1a1a1a] pb-3.5">
+            <h3 className="mb-0.5 text-[12.5px] font-semibold text-[#f0ede6]">
+              Web Development
+            </h3>
+            <p className="mb-1.5 font-mono text-[8px] tracking-[0.06em] text-[#555]">
+              Programming Hero Batch 13 · 2024 — Present
+            </p>
+            <p className="text-[11px] font-light leading-[1.65] text-[#666]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
               Frontend &amp; full stack dev with real-world assignments,
               authentication, MongoDB, deployment, and project-based learning.
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="mb-3.5 border-b border-[var(--color-border)] pb-3.5">
             <h3 className="mb-0.5 text-[12.5px] font-semibold text-[var(--color-text)]">
               Academic Study
@@ -336,6 +518,16 @@ export default function EasinArafatCV() {
               National University · Bangladesh · Present
             </p>
             <p className="text-[11px] font-light leading-[1.65] text-[var(--color-text-sec)]">
+=======
+          <div className="mb-3.5 border-b border-[#1a1a1a] pb-3.5">
+            <h3 className="mb-0.5 text-[12.5px] font-semibold text-[#f0ede6]">
+              Academic Study
+            </h3>
+            <p className="mb-1.5 font-mono text-[8px] tracking-[0.06em] text-[#555]">
+              National University · Bangladesh · Present
+            </p>
+            <p className="text-[11px] font-light leading-[1.65] text-[#666]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
               Continuing academic study while improving programming,
               presentation, teamwork, and communication skills.
             </p>
@@ -343,7 +535,11 @@ export default function EasinArafatCV() {
 
           <SectionHead num="05" title="Languages" />
 
+<<<<<<< HEAD
           <div className="mb-3.5 border-b border-[var(--color-border)] pb-3.5">
+=======
+          <div className="mb-3.5 border-b border-[#1a1a1a] pb-3.5">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
             {[
               ["Bangla", "Native"],
               ["English", "Professional"],
@@ -353,8 +549,13 @@ export default function EasinArafatCV() {
                 key={lang}
                 className="mb-1.5 flex items-center justify-between"
               >
+<<<<<<< HEAD
                 <span className="text-[11px] text-[var(--color-text-sec)]">{lang}</span>
                 <span className="font-mono text-[7.5px] text-[var(--color-primary)]">
+=======
+                <span className="text-[11px] text-[#888]">{lang}</span>
+                <span className="font-mono text-[7.5px] text-[#c8f25a]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
                   {level}
                 </span>
               </div>
@@ -363,7 +564,11 @@ export default function EasinArafatCV() {
 
           <SectionHead num="06" title="Interests" />
 
+<<<<<<< HEAD
           <p className="text-[11px] font-light leading-[1.65] text-[var(--color-text-sec)]">
+=======
+          <p className="text-[11px] font-light leading-[1.65] text-[#666]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
             Web Development, Frontend Design, Next.js Projects, Clean UI Design,
             Problem Solving, and continuous learning.
           </p>
@@ -371,14 +576,26 @@ export default function EasinArafatCV() {
       </div>
 
       {/* BOTTOM */}
+<<<<<<< HEAD
       <div className="flex items-center justify-between gap-4 border-t border-[var(--color-border)] px-9 py-3 max-sm:flex-col max-sm:items-start max-sm:px-5">
         <span className="font-mono text-[7.5px] uppercase tracking-[0.1em] text-[var(--color-muted)]">
           Easin Arafat · CV 2026
         </span>
         <span className="font-mono text-[7.5px] uppercase tracking-[0.1em] text-[var(--color-muted)]">
+=======
+      <div className="flex items-center justify-between gap-4 border-t border-[#222] px-9 py-3 max-sm:flex-col max-sm:items-start max-sm:px-5">
+        <span className="font-mono text-[7.5px] uppercase tracking-[0.1em] text-[#333]">
+          Easin Arafat · CV 2026
+        </span>
+        <span className="font-mono text-[7.5px] uppercase tracking-[0.1em] text-[#333]">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
           React · Next.js · Tailwind · Better Auth · MongoDB
         </span>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972

@@ -22,7 +22,11 @@ const TextSlider = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <div className="relative h-[30px] w-full overflow-hidden flex items-center">
+=======
+    <div className="relative overflow-hidden h-[30px] w-full flex items-center">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
       <div
         className="absolute transition-transform duration-500 ease-in-out"
         style={{
@@ -32,7 +36,11 @@ const TextSlider = () => {
         {textItems.map((item, index) => (
           <p
             key={index}
+<<<<<<< HEAD
             className="flex h-[30px] items-center whitespace-nowrap font-semibold tracking-wider text-[var(--color-primary)]"
+=======
+            className="h-[30px] font-semibold text-white/70 tracking-wider whitespace-nowrap flex items-center"
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
           >
             {item}
           </p>

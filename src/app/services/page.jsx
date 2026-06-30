@@ -1,5 +1,8 @@
 "use client";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
 import Container from "@/components/Container";
 import Title from "@/components/Title";
 import { servicesData } from "@/constants";
@@ -9,10 +12,14 @@ import Link from "next/link";
 
 const ServicesPage = () => {
   return (
+<<<<<<< HEAD
     <section 
       style={{ color: "var(--color-text)" }} 
       className="min-h-[80vh] flex flex-col justify-center py-5 md:py-10"
     >
+=======
+    <section className="min-h-[80vh] flex flex-col justify-center py-5 md:py-10 text-white">
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
       <Container>
         <motion.div
           initial={{ opacity: 0 }}
@@ -26,6 +33,7 @@ const ServicesPage = () => {
             {servicesData?.map((item) => (
               <div
                 key={item?._id}
+<<<<<<< HEAD
                 style={{
                   background: "var(--color-surface)",
                   borderColor: "var(--color-border)",
@@ -66,6 +74,24 @@ const ServicesPage = () => {
                   style={{ borderBottom: "1px solid var(--color-border)" }} 
                   className="w-full mt-2 opacity-60" 
                 />
+=======
+                className="flex flex-col p-6 bg-lightSky/5 border border-lightSky/20 hover:border-lightSky/30 rounded-lg shadow-md group hover:shadow-lg transition-shadow duration-300 gap-2"
+              >
+                <div className="w-full flex items-center justify-between">
+                  <p className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover hoverEffect">
+                    {item?._id}
+                  </p>
+                  <Link href={item?.href}>
+                    <ArrowUp className="rotate-45" />
+                  </Link>
+                </div>
+                <h2 className="font-semibold">{item?.title}</h2>
+                <p className="text-sm md:text-base text-white/80">
+                  {item?.description}
+                </p>
+
+                <div className="border-b border-white/20 w-full mt-2" />
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
               </div>
             ))}
           </div>
@@ -75,4 +101,8 @@ const ServicesPage = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ServicesPage;
+=======
+export default ServicesPage;
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972

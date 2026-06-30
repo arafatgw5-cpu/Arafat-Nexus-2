@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 "use client";
 
 import { motion } from "framer-motion";
+=======
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
 import Container from "@/components/Container";
 import HomeDescription from "@/components/HomeDescription";
 import Photo from "@/components/Photo";
@@ -9,15 +12,19 @@ import Statistics from "@/components/Statistics";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import Link from "next/link";
+<<<<<<< HEAD
 import ContactPage from "./contact/page";
 import ServicesPage from "./services/page";
 import ProjectSlider from "./projects/page";
 import AnimatedSection from "@/components/AnimatedSection";
+=======
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
 
 export default function Home() {
   return (
     <div>
       <Container className="py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+<<<<<<< HEAD
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -37,11 +44,24 @@ export default function Home() {
             </h1>
           </div>
 
+=======
+        <div className="flex flex-col items-center md:items-start gap-5 md:gap-7 text-center md:text-start">
+          <div>
+            <h3 className="font-semibold text-white/70 tracking-wider mb-1">
+              Frontend & Full Stack Developer
+            </h3>
+            <h2 className="text-3xl md:text-5xl mb-2">Hello I&apos;m</h2>
+            <h1 className="text-lightSky text-5xl md:text-7xl tracking-normal">
+              Easin Arafat
+            </h1>
+          </div>
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
           <div className="w-full h-[170px] md:h-[140px] relative">
             <div className="absolute top-0 left-0 w-full h-full">
               <HomeDescription />
             </div>
           </div>
+<<<<<<< HEAD
 
           <Button
             className="bg-transparent rounded-full border border-[var(--color-primary)] text-[var(--color-primary)]
@@ -82,3 +102,24 @@ export default function Home() {
     </div>
   );
 }
+=======
+          <Button className="bg-transparent rounded-full border border-lightSky/50 text-lightSky hover:bg-hoverColor hover:text-black hoverEffect" asChild>
+            <Link
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1"
+            >
+              Download cv <Download />
+            </Link>
+          </Button>
+          <SocialLinks />
+          <Statistics />
+        </div>
+        <Photo />
+      </Container>
+      
+    </div>
+  );
+}
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972

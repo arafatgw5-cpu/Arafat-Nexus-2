@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import { cn } from "@/lib/utils";
 
 // const Container = ({ children, className }) => {
@@ -19,6 +20,13 @@ const Container = ({ children, className, style, ...props }) => {
     >
       {children}
     </div>
+=======
+import { cn } from "@/lib/utils";
+
+const Container = ({ children, className }) => {
+  return (
+    <div className={cn("max-w-6xl mx-auto px-4", className)}>{children}</div>
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
   );
 };
 

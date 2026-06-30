@@ -5,8 +5,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const EnhancedPhoto = () => {
+<<<<<<< HEAD
   // থিম ভেরিয়েবল ব্যবহার করা হয়েছে
   const circleColors = ["var(--color-primary)"];
+=======
+  const circleColors = ["#00ff99"];
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
 
   const circleVariants = {
     initial: {
@@ -55,7 +59,11 @@ const EnhancedPhoto = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
+<<<<<<< HEAD
           className="absolute left-1/2 top-1/2 z-10 h-[255px] w-[255px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full bg-[var(--color-bg)] sm:h-[285px] sm:w-[285px] lg:h-[420px] lg:w-[420px]"
+=======
+          className="absolute left-1/2 top-1/2 z-10 h-[255px] w-[255px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full bg-bodyColor sm:h-[285px] sm:w-[285px] lg:h-[420px] lg:w-[420px]"
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
         >
           <Image
             src="/hero.png"

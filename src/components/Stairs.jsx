@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 "use client";
 
+=======
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
 import { motion } from "framer-motion";
 
 const stairAnimation = {
@@ -34,11 +37,19 @@ const Stairs = () => {
             ease: "easeInOut",
             delay: reverseIndex(index) * 0.1,
           }}
+<<<<<<< HEAD
           className="relative h-full w-full bg-[var(--color-primary)]"
+=======
+          className="h-full w-full bg-white relative"
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
         />
       ))}
     </>
   );
 };
 
+<<<<<<< HEAD
 export default Stairs;
+=======
+export default Stairs;
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972

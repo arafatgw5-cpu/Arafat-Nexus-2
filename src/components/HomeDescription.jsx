@@ -13,10 +13,16 @@ const HomeDescription = () => {
   useEffect(() => {
     setHasLoaded(true);
   }, []);
+<<<<<<< HEAD
 
   return (
     <motion.p
       style={{ color: "var(--color-text-sec)" }}
+=======
+  
+  return (
+    <motion.p
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
       className="w-auto font-normal leading-7 mb-6 min-h-30"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -26,9 +32,15 @@ const HomeDescription = () => {
         displayedText.split("").map((char, index) => (
           <motion.span
             key={index}
+<<<<<<< HEAD
             initial={{ color: "var(--color-text-sec)" }}
             animate={{
               color: isComplete ? "var(--color-text)" : "var(--color-text-sec)",
+=======
+            initial={{ color: "rgb(156 163 175)" }}
+            animate={{
+              color: isComplete ? "rgb(255 255 255)" : "rgb(156 163 175)",
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
             }}
             transition={{ duration: 0.5, delay: index * 0.03 }}
           >
@@ -36,10 +48,18 @@ const HomeDescription = () => {
           </motion.span>
         ))
       ) : (
+<<<<<<< HEAD
         <span style={{ color: "var(--color-text-sec)" }}>{description}</span>
+=======
+        <span className="text-white/60">{description}</span>
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
       )}
     </motion.p>
   );
 };
 
+<<<<<<< HEAD
 export default HomeDescription;
+=======
+export default HomeDescription;
+>>>>>>> 5ecbec057e38bb4142a7f973d49e609781513972
