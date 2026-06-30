@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  padding: 0;
+  margin: 0;
+}
+/* Default theme (Red Premium) — overridden at runtime via JS */
+:root {
+  --color-bg:          #290C18;
+  --color-surface:     #34101E;
+  --color-primary:     #E83960;
+  --color-secondary:   #881534;
+  --color-border:      #6B1327;
+  --color-text:        #FFFFFF;
+  --color-text-sec:    rgba(255, 255, 255, 0.75);
+  --color-muted:       rgba(255, 255, 255, 0.55);
+  --color-gradient:    linear-gradient(135deg, #E83960 0%, #881534 100%);
+  --color-glow:        0 0 20px rgba(232, 57, 96, 0.35);
+  --color-glow-hover:  0 0 30px rgba(232, 57, 96, 0.55);
+}
+
+/* Smooth theme transition on everything except media */
+*,
+*::before,
+*::after {
+  transition:
+    background-color 300ms ease,
+    border-color     300ms ease,
+    color            300ms ease,
+    box-shadow       300ms ease,
+    opacity          300ms ease;
+}
+
+img, video, svg { transition: none; }
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}

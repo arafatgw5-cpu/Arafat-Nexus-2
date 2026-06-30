@@ -1,0 +1,99 @@
+export const themes = {
+  "red-premium": {
+    key: "red-premium",
+    label: "Red Premium",
+    preview: "#E83960",
+    colors: {
+      background:    "#290C18",
+      surface:       "#34101E",
+      primary:       "#E83960",
+      secondary:     "#881534",
+      border:        "#6B1327",
+      text:          "#FFFFFF",
+      textSecondary: "rgba(255,255,255,0.75)",
+      muted:         "rgba(255,255,255,0.55)",
+      gradient:      "linear-gradient(135deg, #E83960 0%, #881534 100%)",
+      glow:          "0 0 20px rgba(232,57,96,0.35)",
+      glowHover:     "0 0 30px rgba(232,57,96,0.55)",
+    },
+  },
+
+  "dark-ocean": {
+    key: "dark-ocean",
+    label: "Dark Ocean",
+    preview: "#38BDF8",
+    colors: {
+      background:    "#040F1A",
+      surface:       "#071826",
+      primary:       "#38BDF8",
+      secondary:     "#0369A1",
+      border:        "#0C2D48",
+      text:          "#FFFFFF",
+      textSecondary: "rgba(255,255,255,0.75)",
+      muted:         "rgba(255,255,255,0.55)",
+      gradient:      "linear-gradient(135deg, #38BDF8 0%, #0369A1 100%)",
+      glow:          "0 0 20px rgba(56,189,248,0.35)",
+      glowHover:     "0 0 30px rgba(56,189,248,0.55)",
+    },
+  },
+
+  "forest-night": {
+    key: "forest-night",
+    label: "Forest Night",
+    preview: "#4ADE80",
+    colors: {
+      background:    "#061209",
+      surface:       "#0A1F0E",
+      primary:       "#4ADE80",
+      secondary:     "#166534",
+      border:        "#14532D",
+      text:          "#FFFFFF",
+      textSecondary: "rgba(255,255,255,0.75)",
+      muted:         "rgba(255,255,255,0.55)",
+      gradient:      "linear-gradient(135deg, #4ADE80 0%, #166534 100%)",
+      glow:          "0 0 20px rgba(74,222,128,0.35)",
+      glowHover:     "0 0 30px rgba(74,222,128,0.55)",
+    },
+  },
+
+  "golden-dusk": {
+    key: "golden-dusk",
+    label: "Golden Dusk",
+    preview: "#F59E0B",
+    colors: {
+      background:    "#160E00",
+      surface:       "#221500",
+      primary:       "#F59E0B",
+      secondary:     "#92400E",
+      border:        "#78350F",
+      text:          "#FFFFFF",
+      textSecondary: "rgba(255,255,255,0.75)",
+      muted:         "rgba(255,255,255,0.55)",
+      gradient:      "linear-gradient(135deg, #F59E0B 0%, #92400E 100%)",
+      glow:          "0 0 20px rgba(245,158,11,0.35)",
+      glowHover:     "0 0 30px rgba(245,158,11,0.55)",
+    },
+  },
+
+  "slate-pro": {
+    key: "slate-pro",
+    label: "Slate Pro",
+    preview: "#94A3B8",
+    colors: {
+      background:    "#0B0F17",
+      surface:       "#111827",
+      primary:       "#94A3B8",
+      secondary:     "#475569",
+      border:        "#1E293B",
+      text:          "#FFFFFF",
+      textSecondary: "rgba(255,255,255,0.75)",
+      muted:         "rgba(255,255,255,0.55)",
+      gradient:      "linear-gradient(135deg, #94A3B8 0%, #475569 100%)",
+      glow:          "0 0 20px rgba(148,163,184,0.25)",
+      glowHover:     "0 0 30px rgba(148,163,184,0.45)",
+    },
+  },
+};
+
+export const DEFAULT_THEME = "red-premium";
+export const THEME_STORAGE_KEY = "portfolio-theme";
