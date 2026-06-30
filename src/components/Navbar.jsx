@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NavbarData } from "@/constants";
 import Sidebar from "./Sidebar";
+import ThemeToggle from "./ThemeToggle";
 
 const IconMenu = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -23,6 +24,7 @@ const Navbar = () => {
         className="sticky top-0 z-30 w-full"
       >
         <div className="mx-auto flex items-center justify-between px-5 py-4 max-w-7xl">
+          
           {/* Logo */}
           <Link href="/" className="leading-none flex items-baseline gap-0.5">
             <span style={{ color: "var(--color-text)" }} className="text-2xl font-bold">
@@ -76,20 +78,27 @@ const Navbar = () => {
             })}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(true)}
-            style={{
-              border: "1px solid var(--color-border)",
-              color: "var(--color-text-sec)",
-            }}
-            className="flex h-10 w-10 items-center justify-center rounded-full lg:hidden
-                       hover:text-[var(--color-primary)] hover:border-[var(--color-primary)]
-                       transition-all duration-300"
-            aria-label="Open menu"
-          >
-            <IconMenu />
-          </button>
+          {/* Right Side: ThemeToggle + Mobile Menu */}
+          <div className="flex items-center gap-2">
+            {/* ThemeToggle — desktop & mobile dono te */}
+            <ThemeToggle />
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(true)}
+              style={{
+                border: "1px solid var(--color-border)",
+                color: "var(--color-text-sec)",
+              }}
+              className="flex h-10 w-10 items-center justify-center rounded-full lg:hidden
+                         hover:text-[var(--color-primary)] hover:border-[var(--color-primary)]
+                         transition-all duration-300"
+              aria-label="Open menu"
+            >
+              <IconMenu />
+            </button>
+          </div>
+
         </div>
       </header>
 
