@@ -125,11 +125,10 @@ body {
     background-color 300ms ease,
     border-color     300ms ease,
     color            300ms ease,
-    box-shadow       300ms ease,
-    opacity          300ms ease;
+    box-shadow       300ms ease;
 }
 
-img, video, svg { transition: none; }
+img, video { transition: none; }
 
 body {
   background-color: var(--color-bg);

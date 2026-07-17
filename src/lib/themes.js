@@ -18,24 +18,24 @@ export const themes = {
     },
   },
 
-  "dark-ocean": {
-    key: "dark-ocean",
-    label: "Dark Ocean",
-    preview: "#38BDF8",
-    colors: {
-      background:    "#040F1A",
-      surface:       "#071826",
-      primary:       "#38BDF8",
-      secondary:     "#0369A1",
-      border:        "#0C2D48",
-      text:          "#FFFFFF",
-      textSecondary: "rgba(255,255,255,0.75)",
-      muted:         "rgba(255,255,255,0.55)",
-      gradient:      "linear-gradient(135deg, #38BDF8 0%, #0369A1 100%)",
-      glow:          "0 0 20px rgba(56,189,248,0.35)",
-      glowHover:     "0 0 30px rgba(56,189,248,0.55)",
-    },
-  },
+  // "dark-ocean": {
+  //   key: "dark-ocean",
+  //   label: "Dark Ocean",
+  //   preview: "#38BDF8",
+  //   colors: {
+  //     background:    "#040F1A",
+  //     surface:       "#071826",
+  //     primary:       "#38BDF8",
+  //     secondary:     "#0369A1",
+  //     border:        "#0C2D48",
+  //     text:          "#FFFFFF",
+  //     textSecondary: "rgba(255,255,255,0.75)",
+  //     muted:         "rgba(255,255,255,0.55)",
+  //     gradient:      "linear-gradient(135deg, #38BDF8 0%, #0369A1 100%)",
+  //     glow:          "0 0 20px rgba(56,189,248,0.35)",
+  //     glowHover:     "0 0 30px rgba(56,189,248,0.55)",
+  //   },
+  // },
 
   "forest-night": {
     key: "forest-night",

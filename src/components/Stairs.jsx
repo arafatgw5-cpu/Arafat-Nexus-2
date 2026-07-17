@@ -3,15 +3,9 @@
 import { motion } from "framer-motion";
 
 const stairAnimation = {
-  initial: {
-    top: "0%",
-  },
-  animate: {
-    top: "100%",
-  },
-  exit: {
-    top: ["100%", "0%"],
-  },
+  initial: { y: "0%" },
+  animate: { y: "100%" },
+  exit: { y: ["100%", "0%"] },
 };
 
 const reverseIndex = (index) => {
