@@ -15,6 +15,7 @@ import ContactPage from "./contact/page";
 import ServicesPage from "./services/page";
 import ProjectSlider from "./projects/page";
 import AnimatedSection from "@/components/AnimatedSection";
+import AboutSection from "@/components/AboutSection";
 
 // Parent container - stagger controls kokhon children animate hobe
 const containerVariants = {
@@ -120,6 +121,10 @@ export default function Home() {
       </Container>
 
       <AnimatedSection>
+        <AboutSection />
+      </AnimatedSection>
+
+      <AnimatedSection delay={0.1}>
         <ServicesPage />
       </AnimatedSection>
 
