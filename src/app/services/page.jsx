@@ -3,9 +3,17 @@
 import Container from "@/components/Container";
 import Title from "@/components/Title";
 import { servicesData } from "@/constants";
-import { motion, useReducedMotion } from "framer-motion";
+import {
+  motion,
+  useReducedMotion,
+  useInView,
+  useMotionValue,
+  useTransform,
+  animate,
+} from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { memo, useEffect, useRef } from "react";
 
 /* ----------------------------- Motion Variants ----------------------------- */
 
@@ -71,9 +79,147 @@ const EmptyState = () => (
   </div>
 );
 
+/* ----------------------------- Category Badge ------------------------------ */
+
+const CategoryBadge = ({ category }) => {
+  if (!category) return null;
+  return (
+    <span
+      className="relative z-10 mb-4 inline-flex w-fit items-center gap-1.5 rounded-full border px-3 py-1 text-[11px]
+                 font-semibold uppercase tracking-wider backdrop-blur-md transition-colors duration-300
+                 group-hover:border-[var(--color-primary)]"
+      style={{
+        borderColor: "var(--color-border)",
+        color: "var(--color-text-sec)",
+        background: "var(--color-surface)",
+      }}
+    >
+      <span
+        aria-hidden="true"
+        className="h-1.5 w-1.5 rounded-full"
+        style={{ background: "var(--color-primary)" }}
+      />
+      {category}
+    </span>
+  );
+};
+
+/* --------------------------- Circular Skill Meter --------------------------- */
+
+const CircularSkillMeter = memo(function CircularSkillMeter({
+  label,
+  percent = 90,
+  size = 60,
+  strokeWidth = 5,
+  prefersReducedMotion,
+  delay = 0,
+}) {
+  const wrapperRef = useRef(null);
+  const isInView = useInView(wrapperRef, { once: true, amount: 0.6 });
+
+  const progress = useMotionValue(0);
+  const radius = (size - strokeWidth) / 2;
+  const circumference = 2 * Math.PI * radius;
+
+  const dashOffset = useTransform(
+    progress,
+    (v) => circumference - (v / 100) * circumference
+  );
+  const roundedLabel = useTransform(progress, (v) => `${Math.round(v)}%`);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    if (prefersReducedMotion) {
+      progress.set(percent);
+      return;
+    }
+
+    const controls = animate(progress, percent, {
+      duration: 1.3,
+      delay,
+      ease: [0.22, 1, 0.36, 1],
+    });
+
+    return () => controls.stop();
+  }, [isInView, percent, prefersReducedMotion, delay, progress]);
+
+  return (
+    <div
+      ref={wrapperRef}
+      className="relative z-10 flex items-center gap-4"
+      role="group"
+      aria-label={`${label ?? "Skill"} proficiency`}
+    >
+      <div
+        className="relative flex shrink-0 items-center justify-center"
+        style={{ width: size, height: size }}
+      >
+        <svg
+          width={size}
+          height={size}
+          className="-rotate-90"
+          role="progressbar"
+          aria-valuenow={percent}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-label={`${label ?? "Skill"} level ${percent}%`}
+        >
+          <circle
+            cx={size / 2}
+            cy={size / 2}
+            r={radius}
+            fill="none"
+            strokeWidth={strokeWidth}
+            style={{ stroke: "var(--color-border)" }}
+          />
+          <motion.circle
+            cx={size / 2}
+            cy={size / 2}
+            r={radius}
+            fill="none"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            style={{
+              stroke: "var(--color-primary)",
+              strokeDasharray: circumference,
+              strokeDashoffset: dashOffset,
+              filter: "drop-shadow(0 0 5px var(--color-primary))",
+            }}
+          />
+        </svg>
+        <motion.span
+          className="absolute text-[13px] font-bold tabular-nums"
+          style={{ color: "var(--color-text)" }}
+          aria-hidden="true"
+        >
+          {roundedLabel}
+        </motion.span>
+      </div>
+
+      {label && (
+        <div className="flex flex-col">
+          <span
+            className="text-[13px] font-semibold leading-tight"
+            style={{ color: "var(--color-text)" }}
+          >
+            {label}
+          </span>
+          <span
+            className="text-[11px]"
+            style={{ color: "var(--color-text-sec)" }}
+          >
+            Proficiency
+          </span>
+        </div>
+      )}
+    </div>
+  );
+});
+
 /* ------------------------------ Service Card ------------------------------- */
 
-const ServiceCard = ({ item, prefersReducedMotion }) => {
+const ServiceCard = ({ item, prefersReducedMotion, index }) => {
   return (
     <motion.article
       variants={cardVariants}
@@ -145,6 +291,9 @@ const ServiceCard = ({ item, prefersReducedMotion }) => {
         </Link>
       </div>
 
+      {/* Category badge */}
+      <CategoryBadge category={item?.category} />
+
       {/* Title */}
       <h2
         style={{ color: "var(--color-text)" }}
@@ -161,6 +310,18 @@ const ServiceCard = ({ item, prefersReducedMotion }) => {
       >
         {item?.description}
       </p>
+
+      {/* Skill level meter */}
+      {typeof item?.level === "number" && (
+        <div className="relative z-10 mt-6">
+          <CircularSkillMeter
+            label={item?.skillLabel ?? item?.title}
+            percent={item.level}
+            prefersReducedMotion={prefersReducedMotion}
+            delay={index ? index * 0.05 : 0}
+          />
+        </div>
+      )}
 
       {/* Bottom animated progress line */}
       <div className="relative z-10 mt-8 pt-6">
@@ -241,10 +402,11 @@ const ServicesPage = () => {
           className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-10"
         >
           {hasServices ? (
-            servicesData.map((item) => (
+            servicesData.map((item, index) => (
               <ServiceCard
                 key={item?._id}
                 item={item}
+                index={index}
                 prefersReducedMotion={prefersReducedMotion}
               />
             ))

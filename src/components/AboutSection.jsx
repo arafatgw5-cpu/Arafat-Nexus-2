@@ -4,32 +4,38 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Container from "./Container";
 import Title from "./Title";
-import { User, Code2, GraduationCap, MapPin } from "lucide-react";
+import { User, Code2, GraduationCap, MapPin, Coffee } from "lucide-react";
 
 const aboutData = [
   {
     icon: User,
     title: "Who am I?",
     description:
-      "I'm a passionate web developer focused on creating interactive and accessible digital experiences. I enjoy turning complex problems into simple, beautiful, and intuitive designs.",
+      "I'm a passionate web developer driven by curiosity and a love for creating interactive, accessible digital experiences. I find immense joy in turning complex logic into simple, intuitive, and beautiful interfaces.",
   },
   {
     icon: Code2,
     title: "What I do?",
     description:
-      "I specialize in Frontend and Full-stack development using React, Next.js, and Tailwind CSS. From crafting seamless UIs to building robust backend systems, I cover the entire web spectrum.",
+      "I specialize in modern Full-stack development using React, Next.js, and Tailwind CSS. I enjoy bridging the gap between engineering and design, building everything from seamless front-end UIs to robust back-end systems.",
   },
   {
     icon: GraduationCap,
     title: "My Journey",
     description:
-      "With over a year of dedicated learning and hands-on practice, I've delivered multiple real-world projects and constantly strive to stay updated with modern web technologies.",
+      "My programming journey began with a simple curiosity about how the web works. Over the past year of intense, hands-on learning, I've shipped multiple real-world projects and constantly challenge myself to master new tools.",
   },
   {
     icon: MapPin,
     title: "Location",
     description:
-      "Based in Bangladesh, available for freelance opportunities, remote internships, and open-source collaborations globally.",
+      "Proudly based in Bangladesh, yet globally connected. I'm readily available for remote work, freelance opportunities, and open-source collaborations with developers and teams worldwide.",
+  },
+  {
+    icon: Coffee,
+    title: "Beyond Coding",
+    description:
+      "Life isn't just about code! I love exploring new technologies, listening to great music while building side projects, and traveling to new places. Balancing screen time with family and real-world exploration keeps my problem-solving sharp.",
   },
 ];
 
@@ -72,7 +78,7 @@ const AboutSection = () => {
           >
             <div
               className="relative group w-full max-w-sm rounded-2xl overflow-hidden border shadow-lg
-                         transition-shadow duration-300 hover:shadow-[var(--color-glow)]"
+                          transition-shadow duration-300 hover:shadow-[var(--color-glow)]"
               style={{ borderColor: "var(--color-border)" }}
             >
               {/* Inner accent ring (fades in on hover) */}
@@ -101,7 +107,7 @@ const AboutSection = () => {
               {/* Portrait image — keeps 2:3 aspect ratio, no crop */}
               <div className="relative aspect-[2/3] w-full">
                 <Image
-                  src="/about.jpeg"          /* <-- তোমার image path বসাও */
+                  src="/about.jpeg"         /* <-- তোমার image path বসাও */
                   alt="Portrait of the developer"
                   fill
                   sizes="(max-width: 1024px) 90vw, 400px"

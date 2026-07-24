@@ -3,7 +3,7 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Github, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowUpRight, Github, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -24,60 +24,7 @@ import {
 } from "@/components/ui/carousel";
 
 import Container from "@/components/Container";
-
-const projects = [
-   {
-    id: "01",
-    title: "SCIC AI Resume Builder",
-    category: "Full Stack",
-    description:
-      "An AI-powered Resume Builder that enables users to create, edit, preview, and download professional resumes. Includes secure authentication, resume management dashboard, AI-assisted content generation, and responsive modern UI.",
-    stack: [
-      "Next.js",
-      "TypeScript",
-      "Express.js",
-      "MongoDB",
-      "Better Auth",
-      "Tailwind CSS",
-      "AI Integration",
-    ],
-    image: "/scic.png",
-    liveUrl: "https://scic-ass-frontend.vercel.app/",
-    githubUrl: "https://github.com/arafatgw5-cpu/Scic-assignment-Frontend",
-  },
-  
-  {
-    id: "02",
-    title: "Orrderlo",
-    category: "Full Stack",
-    description:
-      "A modern restaurant management platform with role-based authentication (Customer, Waiter, Manager), table reservation, food ordering, order tracking, dashboard management, and responsive premium UI built with Next.js and Express.js.",
-    stack: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Express.js",
-      "MongoDB",
-      "JWT",
-      "TanStack Query",
-    ],
-    image: "/orrderlo.png",
-    liveUrl: "https://task-989.vercel.app",
-    githubUrl: "https://github.com/arafatgw5-cpu/Orrderlo-FFF",
-  },
-  {
-    id: "03",
-    title: "Ticket Bari",
-    category: "Full Stack",
-    description:
-      "A modern online ticket booking platform with role-based dashboards (User, Vendor, Admin), secure Stripe payment integration, and real-time ticket management.",
-    stack: ["Next.js", "Stripe", "TanStack Query", "Node.js", "MongoDB"],
-    image: "/ticketbari.png",
-    liveUrl: "https://a-fff.vercel.app",
-    githubUrl: "https://github.com/arafatgw5-cpu/Ticket-Booking-Platform-FFF",
-  },
- 
-];
+import { projects } from "@/lib/projects";
 
 export default function ProjectSlider() {
   const [api, setApi] = React.useState(null);
@@ -117,7 +64,6 @@ export default function ProjectSlider() {
       }}
       className="relative overflow-hidden py-14 md:py-24"
     >
-      {/* Ambient gradient mesh background */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -left-20 top-20 h-80 w-80 rounded-full bg-[var(--color-primary)]/20 blur-[130px]" />
         <div className="absolute bottom-0 -right-20 h-80 w-80 rounded-full bg-[var(--color-primary)]/20 blur-[130px]" />
@@ -137,7 +83,6 @@ export default function ProjectSlider() {
 
       <Container>
         <div className="relative z-10">
-          {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -175,7 +120,6 @@ export default function ProjectSlider() {
                   <Card className="overflow-hidden rounded-[24px] border border-[var(--color-primary)]/15 bg-[var(--color-surface)]/80 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.25)] backdrop-blur-xl">
                     <CardContent className="p-5 md:p-8 lg:p-10">
                       <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
-                        {/* Left Content */}
                         <div className="order-2 lg:order-1">
                           <div className="space-y-5">
                             <div className="flex items-center gap-4">
@@ -212,61 +156,74 @@ export default function ProjectSlider() {
 
                             <Separator className="bg-[var(--color-border)]" />
 
-                            <div className="flex items-center gap-4">
-                              <TooltipProvider>
-                                <Tooltip>
-                                  <TooltipTrigger asChild>
-                                    <Link
-                                      href={project.liveUrl}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      aria-label={`View live project: ${project.title}`}
-                                    >
-                                      <Button
-                                        variant="outline"
-                                        size="icon"
-                                        className="group h-11 w-11 rounded-full border-[var(--color-primary)]/20 bg-[var(--color-primary)]/5 text-[var(--color-text)] transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)] hover:shadow-lg hover:shadow-[var(--color-primary)]/20"
+                            <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+                              <div className="flex items-center gap-4">
+                                <TooltipProvider>
+                                  <Tooltip>
+                                    <TooltipTrigger asChild>
+                                      <Link
+                                        href={project.liveUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={`View live project: ${project.title}`}
                                       >
-                                        <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:rotate-45" />
-                                        <span className="sr-only">View Live Project</span>
-                                      </Button>
-                                    </Link>
-                                  </TooltipTrigger>
-                                  <TooltipContent>
-                                    <p>View Live Project</p>
-                                  </TooltipContent>
-                                </Tooltip>
-                              </TooltipProvider>
+                                        <Button
+                                          variant="outline"
+                                          size="icon"
+                                          className="group h-11 w-11 rounded-full border-[var(--color-primary)]/20 bg-[var(--color-primary)]/5 text-[var(--color-text)] transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)] hover:shadow-lg hover:shadow-[var(--color-primary)]/20"
+                                        >
+                                          <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:rotate-45" />
+                                          <span className="sr-only">View Live Project</span>
+                                        </Button>
+                                      </Link>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                      <p>View Live Project</p>
+                                    </TooltipContent>
+                                  </Tooltip>
+                                </TooltipProvider>
 
-                              <TooltipProvider>
-                                <Tooltip>
-                                  <TooltipTrigger asChild>
-                                    <Link
-                                      href={project.githubUrl}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      aria-label={`View GitHub repository: ${project.title}`}
-                                    >
-                                      <Button
-                                        variant="outline"
-                                        size="icon"
-                                        className="group h-11 w-11 rounded-full border-[var(--color-primary)]/20 bg-[var(--color-primary)]/5 text-[var(--color-text)] transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)] hover:shadow-lg hover:shadow-[var(--color-primary)]/20"
+                                <TooltipProvider>
+                                  <Tooltip>
+                                    <TooltipTrigger asChild>
+                                      <Link
+                                        href={project.githubUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={`View GitHub repository: ${project.title}`}
                                       >
-                                        <Github className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
-                                        <span className="sr-only">View GitHub Repository</span>
-                                      </Button>
-                                    </Link>
-                                  </TooltipTrigger>
-                                  <TooltipContent>
-                                    <p>View GitHub Repository</p>
-                                  </TooltipContent>
-                                </Tooltip>
-                              </TooltipProvider>
+                                        <Button
+                                          variant="outline"
+                                          size="icon"
+                                          className="group h-11 w-11 rounded-full border-[var(--color-primary)]/20 bg-[var(--color-primary)]/5 text-[var(--color-text)] transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)] hover:shadow-lg hover:shadow-[var(--color-primary)]/20"
+                                        >
+                                          <Github className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+                                          <span className="sr-only">View GitHub Repository</span>
+                                        </Button>
+                                      </Link>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                      <p>View GitHub Repository</p>
+                                    </TooltipContent>
+                                  </Tooltip>
+                                </TooltipProvider>
+                              </div>
+
+                              <Link href={`/projects/${project.slug}`} className="group relative sm:ml-auto">
+                                <motion.div
+                                  whileHover={{ scale: 1.02 }}
+                                  whileTap={{ scale: 0.98 }}
+                                  className="relative flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary)]/80 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_0_20px_var(--color-primary)]/30 transition-all hover:shadow-[0_0_30px_var(--color-primary)]/50"
+                                >
+                                  <span className="relative z-10">View Details</span>
+                                  <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
+                                </motion.div>
+                              </Link>
                             </div>
                           </div>
                         </div>
 
-                        {/* Right Image — the focal point */}
                         <div className="order-1 lg:order-2">
                           <motion.div
                             initial={
@@ -282,47 +239,40 @@ export default function ProjectSlider() {
                             }}
                             className="relative"
                           >
-                            {/* Floating decorative glow behind image */}
                             <div
                               aria-hidden="true"
                               className="absolute -inset-4 -z-10 rounded-[28px] bg-gradient-to-tr from-[var(--color-primary)]/25 via-transparent to-[var(--color-primary)]/10 opacity-60 blur-2xl"
                             />
 
-                            <div className="group relative aspect-[16/11] overflow-hidden rounded-[20px] border border-[var(--color-border)] bg-[var(--color-bg)] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.45)]">
-                              <Image
-                                src={project.image}
-                                alt={`${project.title} — ${project.category} project preview`}
-                                fill
-                                priority={index === 0}
-                                loading={index === 0 ? "eager" : "lazy"}
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                                className="object-cover object-top transition-transform duration-[900ms] ease-out group-hover:scale-[1.06]"
-                              />
-
-                              {/* Gradient overlay for depth + readability */}
-                              <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/70 via-[var(--color-bg)]/5 to-transparent" />
-
-                              {/* Light reflection sweep on hover */}
-                              <div
-                                aria-hidden="true"
-                                className="pointer-events-none absolute inset-0 -translate-x-full opacity-0 transition-all duration-1000 ease-out group-hover:translate-x-full group-hover:opacity-100"
-                                style={{
-                                  background:
-                                    "linear-gradient(115deg, transparent 35%, rgba(255,255,255,0.14) 50%, transparent 65%)",
-                                }}
-                              />
-
-                              {/* Category badge */}
-                              <div className="absolute left-4 top-4 rounded-full border border-[var(--color-border)] bg-[var(--color-bg)]/50 px-4 py-2 text-xs font-medium text-[var(--color-text)] backdrop-blur-md">
-                                {project.category}
+                            <Link href={`/projects/${project.slug}`}>
+                              <div className="group relative aspect-[16/11] cursor-pointer overflow-hidden rounded-[20px] border border-[var(--color-border)] bg-[var(--color-bg)] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.45)]">
+                                <Image
+                                  src={project.image}
+                                  alt={`${project.title} — ${project.category} project preview`}
+                                  fill
+                                  priority={index === 0}
+                                  loading={index === 0 ? "eager" : "lazy"}
+                                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                                  className="object-cover object-top transition-transform duration-[900ms] ease-out group-hover:scale-[1.06]"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/70 via-[var(--color-bg)]/5 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
+                                <div
+                                  aria-hidden="true"
+                                  className="pointer-events-none absolute inset-0 -translate-x-full opacity-0 transition-all duration-1000 ease-out group-hover:translate-x-full group-hover:opacity-100"
+                                  style={{
+                                    background:
+                                      "linear-gradient(115deg, transparent 35%, rgba(255,255,255,0.14) 50%, transparent 65%)",
+                                  }}
+                                />
+                                <div className="absolute left-4 top-4 rounded-full border border-[var(--color-border)] bg-[var(--color-bg)]/50 px-4 py-2 text-xs font-medium text-[var(--color-text)] backdrop-blur-md">
+                                  {project.category}
+                                </div>
+                                <div
+                                  aria-hidden="true"
+                                  className="pointer-events-none absolute inset-0 rounded-[20px] ring-1 ring-inset ring-white/10"
+                                />
                               </div>
-
-                              {/* Inner ring for premium framing */}
-                              <div
-                                aria-hidden="true"
-                                className="pointer-events-none absolute inset-0 rounded-[20px] ring-1 ring-inset ring-white/10"
-                              />
-                            </div>
+                            </Link>
                           </motion.div>
                         </div>
                       </div>
@@ -332,14 +282,12 @@ export default function ProjectSlider() {
               ))}
             </CarouselContent>
 
-            {/* Desktop Arrows */}
             <div className="mt-8 hidden justify-end gap-3 md:flex">
               <CarouselPrevious className="static h-11 w-11 translate-x-0 translate-y-0 rounded-full border border-[var(--color-primary)]/20 bg-transparent text-[var(--color-text)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)]" />
               <CarouselNext className="static h-11 w-11 translate-x-0 translate-y-0 rounded-full border border-[var(--color-primary)]/20 bg-transparent text-[var(--color-text)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)]" />
             </div>
           </Carousel>
 
-          {/* Mobile Arrows + Dots */}
           <div className="mt-8 flex items-center justify-center gap-4 md:hidden">
             <Button
               variant="outline"
@@ -349,9 +297,7 @@ export default function ProjectSlider() {
               className="h-11 w-11 rounded-full border border-[var(--color-primary)]/20 bg-transparent text-[var(--color-text)] transition-all duration-300 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)]"
             >
               <ChevronLeft className="h-5 w-5" />
-              <span className="sr-only">Previous slide</span>
             </Button>
-
             <div className="flex items-center gap-2">
               {projects.map((project, index) => (
                 <button
@@ -367,7 +313,6 @@ export default function ProjectSlider() {
                 />
               ))}
             </div>
-
             <Button
               variant="outline"
               size="icon"
@@ -376,7 +321,6 @@ export default function ProjectSlider() {
               className="h-11 w-11 rounded-full border border-[var(--color-primary)]/20 bg-transparent text-[var(--color-text)] transition-all duration-300 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)]"
             >
               <ChevronRight className="h-5 w-5" />
-              <span className="sr-only">Next slide</span>
             </Button>
           </div>
         </div>
