@@ -9,61 +9,79 @@ import { motion, useReducedMotion, useInView } from "framer-motion";
 const projects = [
   {
     name: "Ticket Bari",
-    tag: "Ticket Booking",
+    tag: "Full Stack",
     live: "https://a-fff.vercel.app",
-    desc: "A modern online ticket booking platform for buses, trains, flights, and launches with separate dashboards for users, vendors, and admins.",
+    desc: "A modern online ticket booking platform featuring secure Stripe payments, role-based dashboards for Users, Vendors, and Admins, real-time booking management, and responsive UI.",
     features: [
-      "Role-Based Access Control (User, Vendor, Admin)",
-      "Stripe Payment Integration for secure booking",
-      "Dynamic dashboards with real-time statistics",
+      "Stripe Payment Integration",
+      "Role Based Dashboard",
+      "Booking Management",
     ],
     stack: "Next.js · Node.js · MongoDB · Stripe · TanStack Query",
   },
   {
-    name: "SkillSphere",
-    tag: "Next.js App",
-    live: "https://skill-sphere-b13-8-94z6.vercel.app",
-    desc: "A modern online learning platform where users can explore courses, view course details, login/register, and manage their profile with a clean responsive interface.",
+    name: "Orrderlo",
+    tag: "Full Stack",
+    live: "https://task-989.vercel.app",
+    desc: "A modern Restaurant Management Platform with Customer, Waiter, and Manager dashboards, food ordering, table reservations, live order tracking, analytics, and authentication.",
     features: [
-      "Better Auth authentication with protected route flow",
-      "Dynamic course pages using Next.js App Router",
-      "Responsive Tailwind CSS UI for mobile, tablet, and desktop",
+      "Customer Dashboard",
+      "Waiter Dashboard",
+      "Manager Dashboard",
+      "Restaurant Analytics",
+      "Table Reservation",
+      "Food Ordering",
     ],
-    stack: "Next.js · Tailwind CSS · Better Auth · MongoDB",
+    stack: "Next.js · TypeScript · Express.js · MongoDB · JWT · Tailwind CSS · TanStack Query",
   },
   {
-    name: "Dragon News",
-    tag: "News Portal",
-    live: "https://dragon-news-blush.vercel.app",
-    desc: "A responsive news portal with category-based news browsing, dynamic details pages, API data fetching, and clean news-card based layouts.",
+    name: "SCIC AI Resume Builder",
+    tag: "Full Stack",
+    live: "https://scic-ass-frontend.vercel.app/",
+    desc: "An AI-powered Resume Builder where users can create, edit, preview, manage and download professional resumes with authentication and AI-assisted content generation.",
     features: [
-      "Dynamic category and news details routing",
-      "REST API integration with Programming Hero news API",
-      "Authentication UI with Google/GitHub login flow",
+      "AI Resume Generator",
+      "Resume Templates",
+      "ATS Friendly Resume",
+      "Live Preview",
+      "PDF Download",
+      "Authentication",
     ],
-    stack: "Next.js · REST API · Better Auth · Tailwind CSS",
+    stack: "Next.js · TypeScript · Express.js · MongoDB · Better Auth · Tailwind CSS · AI",
   },
 ];
 
 const skillGroups = [
   {
-    title: "Core Frontend",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS", "TanStack Query"],
+    title: "Frontend",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "TanStack Query",
+    ],
     hot: true,
   },
   {
-    title: "UI & Animation",
-    skills: ["DaisyUI", "shadcn/ui", "Framer Motion", "Responsive Design"],
-    hot: false,
-  },
-  {
-    title: "Backend & Auth",
-    skills: ["Node.js", "Express.js", "MongoDB", "Better Auth", "Stripe", "REST API"],
+    title: "Backend",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Better Auth",
+      "REST API",
+      "AI Integration",
+    ],
     hot: false,
   },
   {
     title: "Tools",
-    skills: ["Git", "GitHub", "VS Code", "Vercel", "Render", "Postman"],
+    skills: ["Git", "GitHub", "Postman", "VS Code", "Vercel", "Render"],
     hot: false,
   },
 ];
@@ -241,7 +259,7 @@ export default function EasinArafatCV() {
 
           <Reveal delay={0.18}>
             <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.08em] text-[var(--color-text-sec)] max-[420px]:text-[9.5px] max-[420px]:leading-relaxed">
-              Frontend Developer · React · Next.js · Bangladesh
+              Full Stack Developer · React · Next.js · Bangladesh
             </p>
           </Reveal>
 
@@ -418,15 +436,16 @@ export default function EasinArafatCV() {
           <Stagger className="space-y-4" gap={0.12}>
             <StaggerItem className="border-b border-[var(--color-border)] pb-4">
               <h3 className="mb-1 text-[13px] font-semibold text-[var(--color-text)]">
-                Frontend Developer
+                Full Stack Developer
               </h3>
               <p className="mb-2 font-mono text-[8px] tracking-[0.06em] text-[var(--color-muted)]">
                 Personal &amp; Academic Projects · 2024 — Present
               </p>
               <p className="text-[11px] font-light leading-[1.7] text-[var(--color-text-sec)]">
-                Building modern and responsive web applications using React,
-                Next.js, Tailwind CSS, and Better Auth. Worked on Ticket Bari,
-                SkillSphere, Dragon News, and multiple assignment-based projects.
+                Built Ticket Bari, Orrderlo, and SCIC AI Resume Builder —
+                production-ready full stack applications using modern
+                technologies including Next.js, Express.js, MongoDB, Better
+                Auth, JWT, AI Integration, and Tailwind CSS.
               </p>
             </StaggerItem>
 
