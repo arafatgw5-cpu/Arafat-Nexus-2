@@ -1,4 +1,5 @@
 "use client";
+
 import { useTheme } from "@/components/context/ThemeContext";
 
 export default function ThemeToggle() {
@@ -6,72 +7,61 @@ export default function ThemeToggle() {
 
   const isDark = themeKey === "dark";
 
-  const handleToggle = () => {
+  const toggleTheme = () => {
     setTheme(isDark ? "red-premium" : "dark");
   };
 
   return (
     <button
-      onClick={handleToggle}
-      aria-label="Toggle theme"
-      aria-pressed={!isDark}
-      style={{
-        background: isDark
-          ? "linear-gradient(135deg, #2a2a2a 0%, #0a0a0a 100%)"
-          : "linear-gradient(135deg, #E83960 0%, #881534 100%)",
-        boxShadow: isDark
-          ? "inset 0 1px 2px rgba(0,0,0,0.4), 0 0 7px rgba(255,255,255,0.08)"
-          : "inset 0 1px 2px rgba(0,0,0,0.25), 0 0 10px rgba(232,57,96,0.45)",
-      }}
-      className="relative flex items-center w-[79px] h-[31px] rounded-full
-                 px-[4px] cursor-pointer transition-all duration-500 ease-in-out"
+      onClick={toggleTheme}
+      aria-label="Toggle Theme"
+      className={`relative flex h-9 w-20 items-center rounded-full p-1 transition-all duration-500
+        ${
+          isDark
+            ? "bg-gradient-to-br from-zinc-700 to-black shadow-[0_0_10px_rgba(255,255,255,.08)]"
+            : "bg-gradient-to-br from-[#E83960] to-[#881534] shadow-[0_0_12px_rgba(232,57,96,.45)]"
+        }`}
     >
-      {/* Left icon (Sun - light/red) */}
+      {/* Sun */}
       <span
-        style={{ color: "#FFFFFF", opacity: isDark ? 0.35 : 0.95 }}
-        className="absolute left-2 transition-opacity duration-500 z-0"
+        className={`absolute left-2 transition-all duration-300 ${
+          isDark ? "opacity-30" : "opacity-100"
+        } text-white`}
       >
         <SunIcon />
       </span>
 
-      {/* Right icon (Moon - dark) */}
+      {/* Moon */}
       <span
-        style={{ color: "#FFFFFF", opacity: isDark ? 0.95 : 0.35 }}
-        className="absolute right-2 transition-opacity duration-500 z-0"
+        className={`absolute right-2 transition-all duration-300 ${
+          isDark ? "opacity-100" : "opacity-30"
+        } text-white`}
       >
         <MoonIcon />
       </span>
 
-      {/* Sliding knob with icon inside */}
+      {/* Knob */}
       <span
-        style={{
-          background:
-            "radial-gradient(circle at 35% 30%, #ffffff 0%, #dfe3ea 60%, #c7ccd6 100%)",
-          boxShadow:
-            "0 1px 3px rgba(0,0,0,0.35), inset 0 1px 1px rgba(255,255,255,0.8)",
-          transform: isDark ? "translateX(48px)" : "translateX(0px)",
-        }}
-        className="flex items-center justify-center w-[26px] h-[26px] rounded-full
-                   transition-transform duration-500 ease-in-out z-10"
+        className={`z-10 flex h-6 w-6 items-center justify-center rounded-full
+          bg-white shadow-md transition-all duration-500
+          ${isDark ? "translate-x-12" : "translate-x-0"}`}
       >
-        <span
-          style={{ color: isDark ? "#1a1a1a" : "#E83960" }}
-          className="transition-colors duration-500"
-        >
-          {isDark ? <MoonIcon /> : <SunIcon />}
-        </span>
+        {isDark ? (
+          <MoonIcon className="text-zinc-900" />
+        ) : (
+          <SunIcon className="text-[#E83960]" />
+        )}
       </span>
     </button>
   );
 }
 
-/* --- Icons --- */
-
-function SunIcon() {
+function SunIcon({ className = "" }) {
   return (
     <svg
-      width="12"
-      height="12"
+      className={className}
+      width="14"
+      height="14"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -85,11 +75,12 @@ function SunIcon() {
   );
 }
 
-function MoonIcon() {
+function MoonIcon({ className = "" }) {
   return (
     <svg
-      width="12"
-      height="12"
+      className={className}
+      width="14"
+      height="14"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -97,7 +88,7 @@ function MoonIcon() {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+      <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
     </svg>
   );
 }

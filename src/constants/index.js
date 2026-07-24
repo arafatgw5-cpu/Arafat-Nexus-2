@@ -18,28 +18,28 @@ export const servicesData = [
     _id: "01",
     title: "Frontend Development",
     description:
-      "I build clean, responsive, and modern user interfaces using React, Next.js, Tailwind CSS, DaisyUI, and shadcn/ui.",
+      "I build modern, responsive, and pixel-perfect user interfaces using React, Next.js, TypeScript, Tailwind CSS, HeroUI, shadcn/ui, and Framer Motion.",
     href: "/services",
   },
   {
     _id: "02",
-    title: "Next.js Web Application",
+    title: "Full-Stack Web Development",
     description:
-      "I create fast, SEO-friendly, and dynamic web applications with Next.js App Router, server components, dynamic routes, and optimized performance.",
+      "I develop scalable full-stack web applications with Next.js App Router, Node.js, Express.js, MongoDB, REST APIs, and SEO-optimized architecture.",
     href: "/services",
   },
   {
     _id: "03",
-    title: "Authentication System",
+    title: "Authentication & API Integration",
     description:
-      "I implement login, registration, protected routes, email-password authentication, Google login, GitHub login, and session based auth using Better Auth.",
+      "I implement secure authentication with Better Auth, Google & GitHub login, protected routes, role-based access, and seamless REST API integration using TanStack Query.",
     href: "/services",
   },
   {
     _id: "04",
-    title: "Responsive UI Design",
+    title: "Modern UI/UX & Performance",
     description:
-      "I design mobile, tablet, and desktop friendly layouts with clean UI, smooth animations, Tailwind CSS, and user-friendly experience.",
+      "I create premium responsive UI/UX with smooth animations, AI-powered features, optimized performance, Core Web Vitals, and an exceptional user experience across all devices.",
     href: "/services",
   },
 ];

@@ -235,9 +235,8 @@ const Sidebar = ({ isOpen, onClose }) => {
               </p>
               <div className="flex items-center gap-3">
                 {[
-                  { label: "G",  href: "https://github.com/" },
-                  { label: "In", href: "https://linkedin.com/" },
-                  { label: "Fb", href: "https://facebook.com/" },
+                  { label: "G",  href: "https://github.com/arafatgw5-cpu" },
+                  { label: "In", href: "https://www.linkedin.com/in/easin-arafat-gw5/" },
                 ].map(({ label, href }) => (
                   <Link
                     key={label}

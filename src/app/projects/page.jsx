@@ -26,50 +26,57 @@ import {
 import Container from "@/components/Container";
 
 const projects = [
-  {
+   {
     id: "01",
+    title: "SCIC AI Resume Builder",
+    category: "Full Stack",
+    description:
+      "An AI-powered Resume Builder that enables users to create, edit, preview, and download professional resumes. Includes secure authentication, resume management dashboard, AI-assisted content generation, and responsive modern UI.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Express.js",
+      "MongoDB",
+      "Better Auth",
+      "Tailwind CSS",
+      "AI Integration",
+    ],
+    image: "/scic.png",
+    liveUrl: "https://scic-ass-frontend.vercel.app/",
+    githubUrl: "https://github.com/arafatgw5-cpu/Scic-assignment-Frontend",
+  },
+  
+  {
+    id: "02",
+    title: "Orrderlo",
+    category: "Full Stack",
+    description:
+      "A modern restaurant management platform with role-based authentication (Customer, Waiter, Manager), table reservation, food ordering, order tracking, dashboard management, and responsive premium UI built with Next.js and Express.js.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "TanStack Query",
+    ],
+    image: "/orrderlo.png",
+    liveUrl: "https://task-989.vercel.app",
+    githubUrl: "https://github.com/arafatgw5-cpu/Orrderlo-FFF",
+  },
+  {
+    id: "03",
     title: "Ticket Bari",
     category: "Full Stack",
     description:
       "A modern online ticket booking platform with role-based dashboards (User, Vendor, Admin), secure Stripe payment integration, and real-time ticket management.",
     stack: ["Next.js", "Stripe", "TanStack Query", "Node.js", "MongoDB"],
-    image: "/projectOne.png",
+    image: "/ticketbari.png",
     liveUrl: "https://a-fff.vercel.app",
     githubUrl: "https://github.com/arafatgw5-cpu/Ticket-Booking-Platform-FFF",
   },
-  {
-    id: "02",
-    title: "SkillSphere",
-    category: "Full Stack",
-    description:
-      "A modern online learning platform where users can explore courses, view course details, login/register, and access protected profile pages with a clean responsive design.",
-    stack: ["Next.js", "Better Auth", "MongoDB", "Tailwind CSS"],
-    image: "/projectTwo.png",
-    liveUrl: "https://skill-sphere-b13-8-94z6.vercel.app",
-    githubUrl: "https://github.com/arafatgw5-cpu/SkillSphere-B13_8",
-  },
-  {
-    id: "03",
-    title: "Dragon News",
-    category: "Frontend",
-    description:
-      "A responsive news portal built with Next.js App Router, category-based dynamic routes, API data fetching, authentication UI, and modern card layouts.",
-    stack: ["Next.js", "API Fetching", "Dynamic Route", "Tailwind CSS"],
-    image: "/projectThree.png",
-    liveUrl: "https://dragon-news-blush.vercel.app",
-    githubUrl: "https://github.com/arafatgw5-cpu/Dragon-News",
-  },
-  {
-    id: "04",
-    title: "Portfolio Website",
-    category: "Frontend",
-    description:
-      "A modern personal portfolio website with animated sections, project showcase, clean UI design, responsive layout, and professional developer branding.",
-    stack: ["Next.js", "Framer Motion", "shadcn/ui", "Lucide React"],
-    image: "/projectThree.png",
-    liveUrl: "https://arafat-nexus-2.vercel.app",
-    githubUrl: "https://github.com/arafatgw5-cpu/Arafat-Nexus-2",
-  },
+ 
 ];
 
 export default function ProjectSlider() {
